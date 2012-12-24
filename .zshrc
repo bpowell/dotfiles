@@ -49,10 +49,10 @@ PATH=${PATH}:/sbin
 PATH=${PATH}:ANDROID_SDK/tools
 PATH=${PATH}:ANDROID_SDK/platform-tools
 
-fpath=(~/.zsh-completions $fpath)
+fpath=(~/.shellutils/zsh-completions $fpath)
 
-source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.zsh-history-substring-search/zsh-history-substring-search.zsh
+source ~/.shellutils/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.shellutils/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 #Better colors for ls
 dircolors=$HOME/.dircolors-$(tput colors)
