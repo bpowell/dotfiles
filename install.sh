@@ -43,3 +43,14 @@ fi
 echo "Creating symlink for ~/.vimrc"
 ln -s `pwd`/.vimrc ~/.vimrc
 #####
+
+#tmux
+if [[ -a ~/.tmux.conf ]];
+then
+	echo "Backing up old ~/.tmux.conf"
+	mv ~/.tmux.conf ~/.tmux.conf-backup
+fi
+
+echo "Creating symlink for ~/.tmux.conf"
+ln -s `pwd`/.tmux.conf ~/.tmux.conf
+#####
