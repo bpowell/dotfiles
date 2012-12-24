@@ -54,3 +54,10 @@ fi
 echo "Creating symlink for ~/.tmux.conf"
 ln -s `pwd`/.tmux.conf ~/.tmux.conf
 #####
+
+#vim-android
+cd .vim-deploy/vim-android/
+chmod +x android-install.sh
+./android-install.sh
+cd -
+#####
