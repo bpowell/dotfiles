@@ -4,3 +4,6 @@
 [submodule ".shellutils/zsh-syntax-highlighting"]
 	path = .shellutils/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule ".shellutils/zsh-history-substring-search"]
+	path = .shellutils/zsh-history-substring-search
+	url = https://github.com/zsh-users/zsh-history-substring-search.git
