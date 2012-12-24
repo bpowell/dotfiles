@@ -31,3 +31,15 @@ fi
 
 echo "Creating symlink for ~/.dircolors-8"
 ln -s `pwd`/.dircolors-8 ~/.dircolors-8
+#####
+
+#vimrc
+if [[ -a ~/.vimrc ]];
+then
+	echo "Backing up old ~/.vimrc"
+	mv ~/.vimrc ~/.vimrc-backup
+fi
+
+echo "Creating symlink for ~/.vimrc"
+ln -s `pwd`/.vimrc ~/.vimrc
+#####
