@@ -12,22 +12,24 @@ local helpers = require("vicious.helpers")
 -- }}}
 
 
-module("vicious.widgets.spotify")
+module("vicious.widgets.python")
 
 
 local function worker(format, warg)
-    local spotify_state= {
+    if not warg then return end
+
+    local python_state= {
         ["{info}"]  = "N/A",
     }
 
-    local f = io.popen("spotify_info.py")
+    local f = io.popen(warg)
 
     for line in f:lines() do
-	    spotify_state["{info}"] = helpers.escape(line) 
+	    python_state["{info}"] = helpers.escape(line) 
     end
     f:close()
 
-    return spotify_state
+    return python_state
 end
 -- }}}
 
