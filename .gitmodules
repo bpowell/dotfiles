@@ -10,3 +10,6 @@
 [submodule ".vim-deploy/vim-android"]
 	path = .vim-deploy/vim-android
 	url = https://github.com/bpowell/vim-android.git
+[submodule ".vim-deploy/vim-gitgutter"]
+	path = .vim-deploy/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
