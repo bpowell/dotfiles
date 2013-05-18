@@ -42,12 +42,12 @@ RPROMPT=$'%.%'
 PS1='%F{blue}%B%K{blue}█▓▒░%F{white}%K{blue}%B%n@%m%b%F{blue}%K{black}█▓▒░%F{white}%K{black}%B %D{%a %b %d} %D{%I:%M:%S%P} 
 %}%F{fadebar_cwd}%K{black}%B%/%b%k%f${vcs_info_msg_0_} '
 
-export ANDROID_SDK=/home/dozerl/.android-sdk-linux/
-export ANDROID_NDK=/home/dozerl/.android-ndk-linux/
+export ANDROID_SDK=~/.android-sdk-linux/
+export ANDROID_NDK=~/.android-ndk-linux/
 
 PATH=${PATH}:/sbin
-PATH=${PATH}:ANDROID_SDK/tools
-PATH=${PATH}:ANDROID_SDK/platform-tools
+PATH=${PATH}:$ANDROID_SDK/tools
+PATH=${PATH}:$ANDROID_SDK/platform-tools
 
 fpath=(~/.shellutils/zsh-completions $fpath)
 
