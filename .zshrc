@@ -42,20 +42,20 @@ RPROMPT=$'%.%'
 PS1='%F{blue}%B%K{blue}█▓▒░%F{white}%K{blue}%B%n@%m%b%F{blue}%K{black}█▓▒░%F{white}%K{black}%B %D{%a %b %d} %D{%I:%M:%S%P} 
 %}%F{fadebar_cwd}%K{black}%B%/%b%k%f${vcs_info_msg_0_} '
 
-export ANDROID_SDK=/home/dozerl/.android-sdk-linux/
-export ANDROID_NDK=/home/dozerl/.android-ndk-linux/
+export ANDROID_SDK=$HOME/.android-sdk-linux/
+export ANDROID_NDK=$HOME/.android-ndk-linux/
 
 PATH=${PATH}:/sbin
-PATH=${PATH}:ANDROID_SDK/tools
-PATH=${PATH}:ANDROID_SDK/platform-tools
+PATH=${PATH}:$ANDROID_SDK/tools
+PATH=${PATH}:$ANDROID_SDK/platform-tools
 
-fpath=(~/.shellutils/zsh-completions $fpath)
+fpath=($HOME/.shellutils/zsh-completions $fpath)
 
-source ~/.shellutils/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.shellutils/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $HOME/.shellutils/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.shellutils/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 #Better colors for ls
-dircolors=$HOME/.dircolors-$(tput colors)
+dircolors=$HOME/.shellutils/.dircolors-$(tput colors)
 
 if [[ -f $dircolors ]]; then
     eval $(dircolors -b $dircolors)
@@ -68,5 +68,3 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias update-new='sudo emerge --update --deep --ask --newuse world'
-alias update='sudo emerge --update --deep --ask world'
