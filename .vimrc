@@ -1,3 +1,10 @@
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+filetype on
+filetype indent on
+filetype plugin on
+syntax on
+set lazyredraw
 set ai
 colorscheme darkblue
 set nu
@@ -19,13 +26,6 @@ if filereadable("Makefile")
 	au FileType * set makeprg=make
 endif
 
-call pathogen#infect()
-filetype on
-filetype indent on
-filetype plugin on
-syntax on
-set lazyredraw
-
 function! MakeCWinHelp()
 	:echo "c to close"
 	:echo "h for help"
@@ -40,8 +40,3 @@ nmap <F6> :silent make<CR>:copen<CR>:call MakeCWinKeyMaps()<CR>:redraw!<CR>
 nmap <F7> :silent make -g3<CR>:copen<CR>:call MakeCWinKeyMaps()<CR>:redraw!<CR>
 nmap <F3> "zyw oSystem.out.printf("",<Esc>pi);<Esc>1dd"
 nmap <F4> "zyeb"xywmagg]m%O<Esc>opublic <Esc>"xpAget<Esc>"zpb3l~A()<Esc>o{<Esc>oreturn this.<Esc>"zpA;<Esc>o}<Esc>o<Esc>opublic void set<Esc>"zpb3l~A(<Esc>"xpA <Esc>"zpA)<Esc>o{<Esc>othis.<Esc>"zpA = <Esc>"zpA;<Esc>o}<Esc>'a
-
-"Added by android-vim:
-set tags=/home/dozerl/.vim/tags
-autocmd Filetype java setlocal omnifunc=javacomplete#Complete
-let g:SuperTabDefaultCompletionType = 'context'
