@@ -9,6 +9,7 @@ set ai
 colorscheme darkblue
 set nu
 set laststatus=2
+set dict=/usr/share/dict/words
 
 "Rename tabs to show tab# and # of viewports
 if exists("+showtabline")
