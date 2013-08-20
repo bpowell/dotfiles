@@ -1,0 +1,17 @@
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+[color "branch"]
+	current = yellow reverse
+	local = yello
+	remote = green
+[color "diff"]
+	meta = yello bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = "yellow"
+	changed = "green"
+	untracked = "cyan"
