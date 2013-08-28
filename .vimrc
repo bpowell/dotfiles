@@ -10,6 +10,7 @@ colorscheme darkblue
 set nu
 set laststatus=2
 set dict=/usr/share/dict/words
+set statusline=%F
 
 "Rename tabs to show tab# and # of viewports
 if exists("+showtabline")
