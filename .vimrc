@@ -11,6 +11,8 @@ set nu
 set laststatus=2
 set dict=/usr/share/dict/words
 set statusline=%F
+set expandtab
+set tabstop=4
 
 "au FileType java set makeprg=javac\ % |
 "	\ :nmap <F9> :!java -cp . %:r<CR>:redraw!<CR>|
