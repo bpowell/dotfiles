@@ -45,3 +45,6 @@ endfunction
 nmap <F7> :silent make -g3<CR>:copen<CR>:call MakeCWinKeyMaps()<CR>:redraw!<CR>
 nmap <F3> "zyw oSystem.out.printf("",<Esc>pi);<Esc>1dd"
 nmap <F4> "zyeb"xywmagg]m%O<Esc>opublic <Esc>"xpAget<Esc>"zpb3l~A()<Esc>o{<Esc>oreturn this.<Esc>"zpA;<Esc>o}<Esc>o<Esc>opublic void set<Esc>"zpb3l~A(<Esc>"xpA <Esc>"zpA)<Esc>o{<Esc>othis.<Esc>"zpA = <Esc>"zpA;<Esc>o}<Esc>'a
+
+" vim-go
+let g:go_fmt_command = "goimports"
