@@ -14,8 +14,12 @@ HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
 
-#Disbale stupid audible bell
+#Disable stupid audible bell
 unsetopt beep
+
+#Silence system bell when using less pager
+alias less='less -Q'
+alias man='man -P "less -Q"'
 
 #Set keybindings as VIM
 bindkey -v
