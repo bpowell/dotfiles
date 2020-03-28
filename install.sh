@@ -25,10 +25,10 @@ cp .tmux.conf ~/
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo "In tmux press `prefix + I` to install plugins"
 
-# vim setup
-cp -R .vim* ~/
-vim -c 'GoInstallBinaries' -c 'q'
-
 # zsh
 mkdir ~/gopath
 cp -R .zsh* ~/
+
+# vim setup
+cp -R .vim* ~/
+vim -c 'GoInstallBinaries' -c 'q'
