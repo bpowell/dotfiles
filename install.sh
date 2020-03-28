@@ -24,3 +24,6 @@ echo "In tmux press `prefix + I` to install plugins"
 
 # vim setup
 cp -R .vim* ~/
+
+# zsh
+cp -R .zsh* ~/
