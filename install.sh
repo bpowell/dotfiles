@@ -13,9 +13,11 @@ git submodule update
 for f in $(compaudit);do sudo chown -R $(whoami):admin $f;done;
 for f in $(compaudit);do sudo chmod -R 755 $f;done;
 
-# Setup global gitignore
+# git config
 cp .gitignore ~/
 git config --global core.excludesfile ~/.gitignore
+git config --global user.email "bpowell29a@gmail.com"
+git config --global user.name "Brandon Powell"
 
 # tmux setup
 cp .tmux.conf ~/
