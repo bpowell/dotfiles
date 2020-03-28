@@ -32,3 +32,9 @@ cp -R .zsh* ~/
 # vim setup
 cp -R .vim* ~/
 vim -c 'GoInstallBinaries' -c 'q'
+
+# SSH keys for github
+ssh-keygen -f ~/.ssh/github
+cat ~/.ssh/github.pub | pbcopy
+echo "Can now paste key into GitHub"
+open "https://github.com/settings/keys"
