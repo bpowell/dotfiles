@@ -48,3 +48,5 @@ nmap <F4> "zyeb"xywmagg]m%O<Esc>opublic <Esc>"xpAget<Esc>"zpb3l~A()<Esc>o{<Esc>o
 
 " vim-go
 let g:go_fmt_command = "goimports"
+
+imap jj <Esc>

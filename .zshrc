@@ -49,21 +49,6 @@ fpath=($HOME/.shellutils/zsh-completions $fpath)
 source $HOME/.shellutils/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/.shellutils/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-#Better colors for ls
-dircolors=$HOME/.shellutils/.dircolors-$(tput colors)
-
-if [[ -f $dircolors ]]; then
-    eval $(dircolors -b $dircolors)
-else
-    eval $(dircolors)
-fi
-
-#Aliases for commands
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-
 #############
 # zsh-history-bstring-search
 #############
