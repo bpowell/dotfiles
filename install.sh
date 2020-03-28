@@ -18,6 +18,7 @@ cp .gitignore ~/
 git config --global core.excludesfile ~/.gitignore
 git config --global user.email "bpowell29a@gmail.com"
 git config --global user.name "Brandon Powell"
+git config --global alias.co checkout
 
 # tmux setup
 cp .tmux.conf ~/
