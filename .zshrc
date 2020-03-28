@@ -66,3 +66,7 @@ bindkey -M vicmd 'j' history-substring-search-down
 # ignore dups
 setopt HIST_IGNORE_ALL_DUPS
 #############
+
+# Go Setup
+export GOPATH=$HOME/gopath
+export PATH=${PATH}:${GOPATH}
