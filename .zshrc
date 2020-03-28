@@ -14,8 +14,12 @@ HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
 
-#Disbale stupid audible bell
+#Disable stupid audible bell
 unsetopt beep
+
+#Silence system bell when using less pager
+alias less='less -Q'
+alias man='man -P "less -Q"'
 
 #Set keybindings as VIM
 bindkey -v
@@ -34,6 +38,9 @@ autoload -Uz vcs_info
 zstyle ':vcs_info:*' actionformats '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f '
 zstyle ':vcs_info:*' formats '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{5}]%f '
 zstyle ':vcs_info:(git):*' branchformat '%b%F{1}:%F{3}%r'
+
+#Git log enhancement
+alias glog='git log --graph --decorate --pretty=oneline --abbrev-commit --all'
 
 #Prompt
 #Right hand side of prompt
