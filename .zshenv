@@ -1,1 +1,1 @@
-DEBIAN_PREVENT_KEYBOARD_CHANGES=yes
+[[ -o login ]] && export PATH='/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
