@@ -35,12 +35,19 @@ zstyle ':vcs_info:*' actionformats '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{3}|%F{
 zstyle ':vcs_info:*' formats '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{5}]%f '
 zstyle ':vcs_info:(git):*' branchformat '%b%F{1}:%F{3}%r'
 
+echo $SHELL | grep -q '/nix/store'
+if [[ $? -eq 0 ]]
+then
+   echo "IN NIX SHELL"
+   NIX_PS1='%F{green}%K{black}[nix-shell]'
+fi
+
 #Prompt
 #Right hand side of prompt
 RPROMPT=$'%.%'
 #Left hand side of prompt
 PS1='%F{blue}%B%K{blue}█▓▒░%F{white}%K{blue}%B%n@%m%b%F{blue}%K{black}█▓▒░%F{white}%K{black}%B %D{%a %b %d} %D{%I:%M:%S%P} 
-%}%F{fadebar_cwd}%K{black}%B%/%b%k%f${vcs_info_msg_0_} '
+${NIX_PS1}%}%F{fadebar_cwd}%K{black}%B%/%b%k%f${vcs_info_msg_0_} '
 
 PATH=${PATH}:/sbin
 
@@ -67,6 +74,5 @@ bindkey -M vicmd 'j' history-substring-search-down
 setopt HIST_IGNORE_ALL_DUPS
 #############
 
-# Go Setup
-export GOPATH=$HOME/gopath
-export PATH=${PATH}:${GOPATH}
+# nix setup
+alias nix-shell='nix-shell --command zsh'
